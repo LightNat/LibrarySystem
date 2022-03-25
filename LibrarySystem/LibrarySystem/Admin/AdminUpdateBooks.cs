@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace LibrarySystem.Admin
 {
@@ -95,7 +96,28 @@ namespace LibrarySystem.Admin
             }
             else
             {
-
+                try
+                {
+                    Connection.DB();
+                    Function.gen = "INSERT INTO Books(title, author, image) VALUES('"+txttitle.Text+"', '"+txtauthor.Text+"', '"+lblfilename+"') ";
+                    Function.command = new SqlCommand(Function.gen, Connection.conn);
+                    Function.command.ExecuteNonQuery();
+                    
+                    try
+                    {
+                        
+                    }
+                    catch (Exception ex)
+                    {
+                        //Do nothing
+                    }
+                    
+                    Connection.conn.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
 
