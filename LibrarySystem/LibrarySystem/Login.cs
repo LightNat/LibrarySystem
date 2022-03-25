@@ -9,12 +9,15 @@ namespace LibrarySystem
 
         private void Login_Load(object sender, EventArgs e)
         {
-
+            var logo = Path.GetDirectoryName(Application.ExecutablePath) + "\\Login\\Library_System.png";
+            pblogo.Image = Image.FromFile(logo);
         }
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
-
+            Admin.AdminViewBooks adminViewBooks = new Admin.AdminViewBooks();
+            this.Visible = false;
+            adminViewBooks.Show();
         }
 
         private void lblguest_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
