@@ -30,5 +30,19 @@ namespace LibrarySystem.Admin
             var profile = Path.GetDirectoryName(Application.ExecutablePath) + "\\Admin\\Admin.png";
             pbprofile.Image = Image.FromFile(profile);
         }
+
+        private void btnbooks_Click(object sender, EventArgs e)
+        {
+            Admin.AdminViewBooks adminViewBooks = new Admin.AdminViewBooks();
+            this.Visible = false;
+            adminViewBooks.Show();
+        }
+
+        private void btnupdateoradd_Click(object sender, EventArgs e)
+        {
+            Admin.AdminUpdateBooks adminUpdateBooks = new Admin.AdminUpdateBooks();
+            this.Visible = false;
+            adminUpdateBooks.Show();
+        }
     }
 }

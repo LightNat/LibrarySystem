@@ -105,6 +105,7 @@
             this.btnbooks.TabIndex = 8;
             this.btnbooks.Text = "Books";
             this.btnbooks.UseVisualStyleBackColor = true;
+            this.btnbooks.Click += new System.EventHandler(this.btnbooks_Click);
             // 
             // btnupdateoradd
             // 
@@ -116,6 +117,7 @@
             this.btnupdateoradd.TabIndex = 9;
             this.btnupdateoradd.Text = "Update / Add";
             this.btnupdateoradd.UseVisualStyleBackColor = true;
+            this.btnupdateoradd.Click += new System.EventHandler(this.btnupdateoradd_Click);
             // 
             // AdminUpdateBooks
             // 
