@@ -11,6 +11,12 @@ namespace LibrarySystem
         {
             var logo = Path.GetDirectoryName(Application.ExecutablePath) + "\\Login\\Library_System.png";
             pblogo.Image = Image.FromFile(logo);
+
+            var username = Path.GetDirectoryName(Application.ExecutablePath) + "\\Login\\Username.png";
+            pbusername.Image = Image.FromFile(username);
+
+            var password = Path.GetDirectoryName(Application.ExecutablePath) + "\\Login\\Password.png";
+            pbpassword.Image = Image.FromFile(password);
         }
 
         private void btnlogin_Click(object sender, EventArgs e)

@@ -31,13 +31,13 @@
             this.pblogo = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pbusername = new System.Windows.Forms.PictureBox();
+            this.pbpassword = new System.Windows.Forms.PictureBox();
             this.btnlogin = new System.Windows.Forms.Button();
             this.lblguest = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pblogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbusername)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbpassword)).BeginInit();
             this.SuspendLayout();
             // 
             // pblogo
@@ -63,23 +63,23 @@
             this.textBox2.Size = new System.Drawing.Size(122, 23);
             this.textBox2.TabIndex = 2;
             // 
-            // pictureBox2
+            // pbusername
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(195, 37);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 27);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
+            this.pbusername.Location = new System.Drawing.Point(215, 37);
+            this.pbusername.Name = "pbusername";
+            this.pbusername.Size = new System.Drawing.Size(32, 27);
+            this.pbusername.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbusername.TabIndex = 3;
+            this.pbusername.TabStop = false;
             // 
-            // pictureBox3
+            // pbpassword
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(195, 72);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 27);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
+            this.pbpassword.Location = new System.Drawing.Point(215, 74);
+            this.pbpassword.Name = "pbpassword";
+            this.pbpassword.Size = new System.Drawing.Size(32, 27);
+            this.pbpassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbpassword.TabIndex = 4;
+            this.pbpassword.TabStop = false;
             // 
             // btnlogin
             // 
@@ -110,8 +110,8 @@
             this.ClientSize = new System.Drawing.Size(401, 166);
             this.Controls.Add(this.lblguest);
             this.Controls.Add(this.btnlogin);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pbpassword);
+            this.Controls.Add(this.pbusername);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pblogo);
@@ -121,8 +121,8 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pblogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbusername)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbpassword)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,8 +133,8 @@
         private PictureBox pblogo;
         private TextBox textBox1;
         private TextBox textBox2;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox3;
+        private PictureBox pbusername;
+        private PictureBox pbpassword;
         private Button btnlogin;
         private LinkLabel lblguest;
     }
