@@ -1,6 +1,6 @@
 ﻿namespace LibrarySystem.Admin
 {
-    partial class AdminViewBooks
+    partial class AdminUpdateBooks
     {
         /// <summary>
         /// Required designer variable.
@@ -36,8 +36,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnbooks = new System.Windows.Forms.Button();
             this.btnupdateoradd = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pblogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbprofile)).BeginInit();
             this.SuspendLayout();
@@ -45,7 +43,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(160, 35);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(423, 281);
@@ -105,7 +102,7 @@
             this.btnbooks.Location = new System.Drawing.Point(0, 196);
             this.btnbooks.Name = "btnbooks";
             this.btnbooks.Size = new System.Drawing.Size(161, 35);
-            this.btnbooks.TabIndex = 9;
+            this.btnbooks.TabIndex = 8;
             this.btnbooks.Text = "Books";
             this.btnbooks.UseVisualStyleBackColor = true;
             // 
@@ -116,21 +113,11 @@
             this.btnupdateoradd.Location = new System.Drawing.Point(0, 229);
             this.btnupdateoradd.Name = "btnupdateoradd";
             this.btnupdateoradd.Size = new System.Drawing.Size(161, 35);
-            this.btnupdateoradd.TabIndex = 10;
+            this.btnupdateoradd.TabIndex = 9;
             this.btnupdateoradd.Text = "Update / Add";
             this.btnupdateoradd.UseVisualStyleBackColor = true;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(183, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 21);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "BOOKS";
-            // 
-            // AdminViewBooks
+            // AdminUpdateBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -144,12 +131,10 @@
             this.Controls.Add(this.pblogo);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AdminViewBooks";
+            this.Name = "AdminUpdateBooks";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AdminViewBooks";
-            this.Load += new System.EventHandler(this.AdminViewBooks_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Text = "AdminUpdateBooks";
+            this.Load += new System.EventHandler(this.AdminUpdateBooks_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pblogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbprofile)).EndInit();
             this.ResumeLayout(false);
@@ -167,6 +152,5 @@
         private Label label2;
         private Button btnbooks;
         private Button btnupdateoradd;
-        private Label label3;
     }
 }

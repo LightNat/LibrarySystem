@@ -16,3 +16,4 @@ C:\Users\Jonathan Gubot\Source\Repos\LibrarySystem\LibrarySystem\LibrarySystem\o
 C:\Users\Jonathan Gubot\Source\Repos\LibrarySystem\LibrarySystem\LibrarySystem\obj\Debug\net6.0-windows\ref\LibrarySystem.dll
 C:\Users\Jonathan Gubot\Source\Repos\LibrarySystem\LibrarySystem\LibrarySystem\obj\Debug\net6.0-windows\LibrarySystem.Login.resources
 C:\Users\Jonathan Gubot\Source\Repos\LibrarySystem\LibrarySystem\LibrarySystem\obj\Debug\net6.0-windows\LibrarySystem.Admin.AdminViewBooks.resources
+C:\Users\Jonathan Gubot\source\repos\LibrarySystem\LibrarySystem\LibrarySystem\obj\Debug\net6.0-windows\LibrarySystem.Admin.AdminUpdateBooks.resources
