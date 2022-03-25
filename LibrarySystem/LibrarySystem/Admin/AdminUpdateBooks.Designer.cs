@@ -36,6 +36,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnbooks = new System.Windows.Forms.Button();
             this.btnupdateoradd = new System.Windows.Forms.Button();
+            this.lbladd = new System.Windows.Forms.Label();
+            this.lblupdate = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pblogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbprofile)).BeginInit();
             this.SuspendLayout();
@@ -43,6 +46,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.lblupdate);
+            this.panel1.Controls.Add(this.lbladd);
             this.panel1.Location = new System.Drawing.Point(160, 35);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(423, 281);
@@ -120,6 +125,27 @@
             this.btnupdateoradd.UseVisualStyleBackColor = true;
             this.btnupdateoradd.Click += new System.EventHandler(this.btnupdateoradd_Click);
             // 
+            // lbladd
+            // 
+            this.lbladd.AutoSize = true;
+            this.lbladd.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lbladd.Location = new System.Drawing.Point(199, 9);
+            this.lbladd.Name = "lbladd";
+            this.lbladd.Size = new System.Drawing.Size(45, 21);
+            this.lbladd.TabIndex = 1;
+            this.lbladd.Text = "ADD";
+            // 
+            // lblupdate
+            // 
+            this.lblupdate.AutoSize = true;
+            this.lblupdate.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblupdate.Location = new System.Drawing.Point(185, 9);
+            this.lblupdate.Name = "lblupdate";
+            this.lblupdate.Size = new System.Drawing.Size(72, 21);
+            this.lblupdate.TabIndex = 2;
+            this.lblupdate.Text = "UPDATE";
+            this.lblupdate.Visible = false;
+            // 
             // AdminUpdateBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -138,6 +164,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminUpdateBooks";
             this.Load += new System.EventHandler(this.AdminUpdateBooks_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pblogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbprofile)).EndInit();
             this.ResumeLayout(false);
@@ -155,5 +183,7 @@
         private Label label2;
         private Button btnbooks;
         private Button btnupdateoradd;
+        private Label lblupdate;
+        private Label lbladd;
     }
 }
