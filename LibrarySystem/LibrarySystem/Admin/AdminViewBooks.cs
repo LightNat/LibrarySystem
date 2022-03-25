@@ -44,5 +44,19 @@ namespace LibrarySystem.Admin
             this.Visible = false;
             adminUpdateBooks.Show();
         }
+
+        private void btnlogout_Click(object sender, EventArgs e)
+        {
+            string text = "Do you wish to log out?";
+            string caption = "Logout";
+
+            DialogResult result = MessageBox.Show(text, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Login login = new Login();
+                this.Visible = false;
+                login.Show();
+            }
+        }
     }
 }
