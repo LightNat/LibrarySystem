@@ -12,6 +12,12 @@ namespace LibrarySystem.Admin
 {
     public partial class AdminUpdateBooks : Form
     {
+        //holds the image info
+        private string fileImage;
+
+        //use for storing the image
+        private string imageFile;
+
         public AdminUpdateBooks()
         {
             InitializeComponent();
@@ -57,6 +63,30 @@ namespace LibrarySystem.Admin
                 this.Visible = false;
                 login.Show();
             }
+        }
+
+        private void btnchoose_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp;) | *.jpg; *.jpeg; *.gif; *.bmp;";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                fileImage = openFileDialog.FileName;
+                imageFile = Path.GetFileName(fileImage);
+                pbimage.Image = new Bitmap(fileImage);
+
+                lblfilename.Text = imageFile;
+            }
+        }
+
+        private void btnadd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnupdate_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
