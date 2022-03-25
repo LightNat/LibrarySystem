@@ -36,8 +36,8 @@
             this.btnchoose = new System.Windows.Forms.Button();
             this.lblfilename = new System.Windows.Forms.Label();
             this.pbimage = new System.Windows.Forms.PictureBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtauthor = new System.Windows.Forms.TextBox();
+            this.txttitle = new System.Windows.Forms.TextBox();
             this.lblupdate = new System.Windows.Forms.Label();
             this.lbladd = new System.Windows.Forms.Label();
             this.pblogo = new System.Windows.Forms.PictureBox();
@@ -63,8 +63,8 @@
             this.panel1.Controls.Add(this.btnchoose);
             this.panel1.Controls.Add(this.lblfilename);
             this.panel1.Controls.Add(this.pbimage);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtauthor);
+            this.panel1.Controls.Add(this.txttitle);
             this.panel1.Controls.Add(this.lblupdate);
             this.panel1.Controls.Add(this.lbladd);
             this.panel1.Location = new System.Drawing.Point(160, 35);
@@ -118,9 +118,9 @@
             this.btnchoose.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnchoose.Location = new System.Drawing.Point(165, 190);
             this.btnchoose.Name = "btnchoose";
-            this.btnchoose.Size = new System.Drawing.Size(75, 23);
+            this.btnchoose.Size = new System.Drawing.Size(60, 23);
             this.btnchoose.TabIndex = 7;
-            this.btnchoose.Text = "Choose File:";
+            this.btnchoose.Text = "Choose File";
             this.btnchoose.UseVisualStyleBackColor = true;
             this.btnchoose.Click += new System.EventHandler(this.btnchoose_Click);
             // 
@@ -144,19 +144,19 @@
             this.pbimage.TabIndex = 5;
             this.pbimage.TabStop = false;
             // 
-            // textBox2
+            // txtauthor
             // 
-            this.textBox2.Location = new System.Drawing.Point(229, 77);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(133, 23);
-            this.textBox2.TabIndex = 4;
+            this.txtauthor.Location = new System.Drawing.Point(229, 77);
+            this.txtauthor.Name = "txtauthor";
+            this.txtauthor.Size = new System.Drawing.Size(133, 23);
+            this.txtauthor.TabIndex = 4;
             // 
-            // textBox1
+            // txttitle
             // 
-            this.textBox1.Location = new System.Drawing.Point(45, 77);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(133, 23);
-            this.textBox1.TabIndex = 3;
+            this.txttitle.Location = new System.Drawing.Point(45, 77);
+            this.txttitle.Name = "txttitle";
+            this.txttitle.Size = new System.Drawing.Size(133, 23);
+            this.txttitle.TabIndex = 3;
             // 
             // lblupdate
             // 
@@ -296,8 +296,8 @@
         private Button btnchoose;
         private Label lblfilename;
         private PictureBox pbimage;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox txtauthor;
+        private TextBox txttitle;
         private Label label5;
         private Label label4;
     }

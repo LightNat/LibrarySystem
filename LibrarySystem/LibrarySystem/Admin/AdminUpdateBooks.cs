@@ -81,7 +81,22 @@ namespace LibrarySystem.Admin
 
         private void btnadd_Click(object sender, EventArgs e)
         {
+            if (String.IsNullOrWhiteSpace(txttitle.Text) == true)
+            {
+                MessageBox.Show("Title must not be set as Null or WhiteSpace, Please try Again!", "Null | WhiteSpace", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (String.IsNullOrWhiteSpace(txtauthor.Text) == true)
+            {
+                MessageBox.Show("Author must not be set as Null or WhiteSpace, Please try Again!", "Null | WhiteSpace", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (lblfilename.Text == "No File Chosen")
+            {
+                MessageBox.Show("Please choose an Image File!", "Image", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
 
+            }
         }
 
         private void btnupdate_Click(object sender, EventArgs e)
