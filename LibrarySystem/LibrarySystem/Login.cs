@@ -5,6 +5,11 @@ namespace LibrarySystem
         public Login()
         {
             InitializeComponent();
+
+            using (var icon = File.OpenRead(Path.GetDirectoryName(Application.ExecutablePath) + "\\Icon\\Books.ico"))
+            {
+                this.Icon = new Icon(icon);
+            }
         }
 
         private void Login_Load(object sender, EventArgs e)
@@ -17,6 +22,8 @@ namespace LibrarySystem
 
             var password = Path.GetDirectoryName(Application.ExecutablePath) + "\\Login\\Password.png";
             pbpassword.Image = Image.FromFile(password);
+
+
         }
 
         private void btnlogin_Click(object sender, EventArgs e)
