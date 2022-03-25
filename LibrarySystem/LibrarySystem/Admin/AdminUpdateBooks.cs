@@ -99,18 +99,23 @@ namespace LibrarySystem.Admin
                 try
                 {
                     Connection.DB();
-                    Function.gen = "INSERT INTO Books(title, author, image) VALUES('"+txttitle.Text+"', '"+txtauthor.Text+"', '"+lblfilename+"') ";
+                    Function.gen = "INSERT INTO Books(title, author, image) VALUES('"+txttitle.Text+"', '"+txtauthor.Text+"', '"+lblfilename.Text+"') ";
                     Function.command = new SqlCommand(Function.gen, Connection.conn);
                     Function.command.ExecuteNonQuery();
                     
                     try
                     {
-                        
+                        File.Copy(fileImage, Path.Combine(Path.GetDirectoryName(Application.ExecutablePath) + "\\Books", lblfilename.Text));
                     }
                     catch (Exception ex)
                     {
                         //Do nothing
                     }
+                    Admin.AdminViewBooks adminViewBooks = new Admin.AdminViewBooks();
+                    this.Visible = false;
+                    adminViewBooks.Show();
+
+                    MessageBox.Show("Book is saved successfully!", "Book", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     
                     Connection.conn.Close();
                 }
