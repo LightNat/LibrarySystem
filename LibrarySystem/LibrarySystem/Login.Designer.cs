@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.pblogo = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtusername = new System.Windows.Forms.TextBox();
+            this.txtpassword = new System.Windows.Forms.TextBox();
             this.pbusername = new System.Windows.Forms.PictureBox();
             this.pbpassword = new System.Windows.Forms.PictureBox();
             this.btnlogin = new System.Windows.Forms.Button();
@@ -49,19 +49,20 @@
             this.pblogo.TabIndex = 0;
             this.pblogo.TabStop = false;
             // 
-            // textBox1
+            // txtusername
             // 
-            this.textBox1.Location = new System.Drawing.Point(248, 37);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(122, 23);
-            this.textBox1.TabIndex = 1;
+            this.txtusername.Location = new System.Drawing.Point(248, 37);
+            this.txtusername.Name = "txtusername";
+            this.txtusername.Size = new System.Drawing.Size(122, 23);
+            this.txtusername.TabIndex = 1;
             // 
-            // textBox2
+            // txtpassword
             // 
-            this.textBox2.Location = new System.Drawing.Point(248, 76);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(122, 23);
-            this.textBox2.TabIndex = 2;
+            this.txtpassword.Location = new System.Drawing.Point(248, 76);
+            this.txtpassword.Name = "txtpassword";
+            this.txtpassword.PasswordChar = '*';
+            this.txtpassword.Size = new System.Drawing.Size(122, 23);
+            this.txtpassword.TabIndex = 2;
             // 
             // pbusername
             // 
@@ -112,8 +113,8 @@
             this.Controls.Add(this.btnlogin);
             this.Controls.Add(this.pbpassword);
             this.Controls.Add(this.pbusername);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtpassword);
+            this.Controls.Add(this.txtusername);
             this.Controls.Add(this.pblogo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
@@ -131,8 +132,8 @@
         #endregion
 
         private PictureBox pblogo;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txtusername;
+        private TextBox txtpassword;
         private PictureBox pbusername;
         private PictureBox pbpassword;
         private Button btnlogin;

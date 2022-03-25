@@ -1,3 +1,5 @@
+using System.Data.SqlClient;
+
 namespace LibrarySystem
 {
     public partial class Login : Form
@@ -28,9 +30,34 @@ namespace LibrarySystem
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
-            Admin.AdminViewBooks adminViewBooks = new Admin.AdminViewBooks();
-            this.Visible = false;
-            adminViewBooks.Show();
+            try
+            {
+                Connection.DB();
+                Function.gen = "SELECT * FROM users WHERE username = '"+txtusername.Text+"' AND password = '"+txtpassword.Text+"' ";
+                Function.command = new SqlCommand(Function.gen, Connection.conn);
+                Function.reader = Function.command.ExecuteReader();
+
+                if (Function.reader.HasRows)
+                {
+                    Function.reader.Read();
+
+                    txtusername.Text = Function.reader.GetValue(1).ToString();
+                    txtpassword.Text = Function.reader.GetValue(2).ToString();
+
+                    Admin.AdminViewBooks adminViewBooks = new Admin.AdminViewBooks();
+                    this.Visible = false;
+                    adminViewBooks.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Credentials!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private void lblguest_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
