@@ -7,11 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace LibrarySystem.Admin
 {
     public partial class AdminViewBooks : Form
     {
+        //For usercontrol variables
+        private int booksCount;
+        private string[] title = new string[100];
+        private string[] author = new string[100];
+        private string[] image = new string[100];
+
         public AdminViewBooks()
         {
             InitializeComponent();
@@ -29,6 +36,8 @@ namespace LibrarySystem.Admin
 
             var profile = Path.GetDirectoryName(Application.ExecutablePath) + "\\Admin\\Admin.png";
             pbprofile.Image = Image.FromFile(profile);
+
+            GenerateBooks();
         }
 
         private void btnbooks_Click(object sender, EventArgs e)
@@ -56,6 +65,66 @@ namespace LibrarySystem.Admin
                 Login login = new Login();
                 this.Visible = false;
                 login.Show();
+            }
+        }
+
+        private void GenerateBooks()
+        {
+            flowLayoutPanelBooks.Controls.Clear();
+
+            try
+            {
+                Connection.DB();
+                Function.gen = "SELECT COUNT(*) FROM books";
+                Function.command = new SqlCommand(Function.gen, Connection.conn);
+                Function.command.ExecuteReader();
+
+                if (Function.reader.HasRows)
+                {
+                    Function.reader.Read();
+
+                    string count = Function.reader.GetValue(0).ToString();
+
+                    booksCount = Convert.ToInt32(count);
+
+                    BookAdminViewUserControl[] bookAdminViewUserControl = new BookAdminViewUserControl[booksCount];
+
+                    try
+                    {
+                        Connection.DB();
+                        Function.gen = "SELECT * FROM books";
+                        Function.command = new SqlCommand(Function.gen, Connection.conn);
+                        Function.reader = Function.command.ExecuteReader();
+
+                        if (Function.reader.HasRows)
+                        {
+                            Function.reader.Read();
+
+                            for (int i = 0; i < bookAdminViewUserControl.Length; i++)
+                            {
+                                title[i] = Function.reader.GetValue(1).ToString();
+                                author[i] = Function.reader.GetValue(2).ToString();
+                                image[i] = Function.reader.GetValue(3).ToString();
+
+                                //Initialize
+                                bookAdminViewUserControl[i] = new BookAdminViewUserControl();
+
+                                //Adding Data
+
+
+                                flowLayoutPanelBooks.Controls.Add(bookAdminViewUserControl[i]);
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

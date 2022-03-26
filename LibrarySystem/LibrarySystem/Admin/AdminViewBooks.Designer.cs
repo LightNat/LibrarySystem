@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanelBooks = new System.Windows.Forms.FlowLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.pblogo = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,11 +46,20 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.flowLayoutPanelBooks);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(160, 35);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(423, 281);
             this.panel1.TabIndex = 0;
+            // 
+            // flowLayoutPanelBooks
+            // 
+            this.flowLayoutPanelBooks.AutoScroll = true;
+            this.flowLayoutPanelBooks.Location = new System.Drawing.Point(0, 99);
+            this.flowLayoutPanelBooks.Name = "flowLayoutPanelBooks";
+            this.flowLayoutPanelBooks.Size = new System.Drawing.Size(423, 182);
+            this.flowLayoutPanelBooks.TabIndex = 1;
             // 
             // label3
             // 
@@ -171,5 +181,6 @@
         private Button btnbooks;
         private Button btnupdateoradd;
         private Label label3;
+        private FlowLayoutPanel flowLayoutPanelBooks;
     }
 }
