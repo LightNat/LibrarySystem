@@ -12,9 +12,15 @@ namespace LibrarySystem
 {
     public partial class BookAdminViewUserControl : UserControl
     {
+        public string bookid;
         public string title;
         public string author;
         public string image;
+
+        public static string bookidUpdate;
+        public static string titleUpdate;
+        public static string authorUpdate;
+        public static string imageUpdate;
 
         public BookAdminViewUserControl()
         {
@@ -39,6 +45,16 @@ namespace LibrarySystem
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void btnupdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btndelete_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

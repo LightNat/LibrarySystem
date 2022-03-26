@@ -15,6 +15,7 @@ namespace LibrarySystem.Admin
     {
         //For usercontrol variables
         private int booksCount;
+        private string[] bookid = new string[100];
         private string[] title = new string[100];
         private string[] author = new string[100];
         private string[] image = new string[100];
@@ -102,7 +103,7 @@ namespace LibrarySystem.Admin
                             for (int i = 0; i < bookAdminViewUserControl.Length; i++)
                             {
                                 Function.reader.Read();
-
+                                bookid[i] = Function.reader.GetValue(0).ToString();
                                 title[i] = Function.reader.GetValue(1).ToString();
                                 author[i] = Function.reader.GetValue(2).ToString();
                                 image[i] = Function.reader.GetValue(3).ToString();
@@ -111,6 +112,7 @@ namespace LibrarySystem.Admin
                                 bookAdminViewUserControl[i] = new BookAdminViewUserControl();
 
                                 //Adding Data
+                                bookAdminViewUserControl[i].bookid = bookid[i];
                                 bookAdminViewUserControl[i].title = title[i];
                                 bookAdminViewUserControl[i].author = author[i];
                                 bookAdminViewUserControl[i].image = image[i];
