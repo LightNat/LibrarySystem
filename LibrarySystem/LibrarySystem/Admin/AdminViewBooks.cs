@@ -77,7 +77,7 @@ namespace LibrarySystem.Admin
                 Connection.DB();
                 Function.gen = "SELECT COUNT(*) FROM books";
                 Function.command = new SqlCommand(Function.gen, Connection.conn);
-                Function.command.ExecuteReader();
+                Function.reader = Function.command.ExecuteReader();
 
                 if (Function.reader.HasRows)
                 {

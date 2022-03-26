@@ -34,8 +34,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.Name = "BookAdminViewUserControl";
-            this.Size = new System.Drawing.Size(292, 105);
+            this.Size = new System.Drawing.Size(400, 122);
             this.ResumeLayout(false);
 
         }
