@@ -1,0 +1,14 @@
+CREATE DATABASE Library_System;
+
+CREATE TABLE users(
+	userid INT PRIMARY KEY IDENTITY(1, 1),
+	username varchar(20),
+	password varchar(20)
+);
+
+CREATE TABLE books(
+	bookid INT PRIMARY KEY IDENTITY(1, 1),
+	title varchar(50),
+	author varchar(50),
+	image varchar(50)
+);

@@ -98,10 +98,11 @@ namespace LibrarySystem.Admin
 
                         if (Function.reader.HasRows)
                         {
-                            Function.reader.Read();
-
+                            
                             for (int i = 0; i < bookAdminViewUserControl.Length; i++)
                             {
+                                Function.reader.Read();
+
                                 title[i] = Function.reader.GetValue(1).ToString();
                                 author[i] = Function.reader.GetValue(2).ToString();
                                 image[i] = Function.reader.GetValue(3).ToString();
@@ -110,7 +111,9 @@ namespace LibrarySystem.Admin
                                 bookAdminViewUserControl[i] = new BookAdminViewUserControl();
 
                                 //Adding Data
-
+                                bookAdminViewUserControl[i].title = title[i];
+                                bookAdminViewUserControl[i].author = author[i];
+                                bookAdminViewUserControl[i].image = image[i];
 
                                 flowLayoutPanelBooks.Controls.Add(bookAdminViewUserControl[i]);
                             }
