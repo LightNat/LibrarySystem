@@ -130,5 +130,22 @@ namespace LibrarySystem.Admin
         {
 
         }
+
+        public void Update()
+        {
+            txttitle.Text = BookAdminViewUserControl.titleUpdate;
+            txtauthor.Text = BookAdminViewUserControl.authorUpdate;
+
+            var image = Path.GetDirectoryName(Application.ExecutablePath) + "\\Books\\" + BookAdminViewUserControl.imageUpdate;
+            pbimage.Image = Image.FromFile(image);
+
+            lblfilename.Text = BookAdminViewUserControl.imageUpdate;
+
+            lbladd.Visible = false;
+            lblupdate.Visible = true;
+
+            btnadd.Enabled = false;
+            btnupdate.Enabled = true;
+        }
     }
 }
