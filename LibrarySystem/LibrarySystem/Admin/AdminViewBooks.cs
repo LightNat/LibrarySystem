@@ -87,7 +87,7 @@ namespace LibrarySystem.Admin
                     string count = Function.reader.GetValue(0).ToString();
 
                     booksCount = Convert.ToInt32(count);
-
+                    
                     BookAdminViewUserControl[] bookAdminViewUserControl = new BookAdminViewUserControl[booksCount];
 
                     try
@@ -130,6 +130,136 @@ namespace LibrarySystem.Admin
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void txtsearch_TextChanged(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(txtsearch.Text) == true)
+            {
+                flowLayoutPanelBooks.Controls.Clear();
+
+                try
+                {
+                    Connection.DB();
+                    Function.gen = "SELECT COUNT(*) FROM books";
+                    Function.command = new SqlCommand(Function.gen, Connection.conn);
+                    Function.reader = Function.command.ExecuteReader();
+
+                    if (Function.reader.HasRows)
+                    {
+                        Function.reader.Read();
+
+                        string count = Function.reader.GetValue(0).ToString();
+
+                        booksCount = Convert.ToInt32(count);
+
+                        BookAdminViewUserControl[] bookAdminViewUserControl = new BookAdminViewUserControl[booksCount];
+
+                        try
+                        {
+                            Connection.DB();
+                            Function.gen = "SELECT * FROM books";
+                            Function.command = new SqlCommand(Function.gen, Connection.conn);
+                            Function.reader = Function.command.ExecuteReader();
+
+                            if (Function.reader.HasRows)
+                            {
+
+                                for (int i = 0; i < bookAdminViewUserControl.Length; i++)
+                                {
+                                    Function.reader.Read();
+                                    bookid[i] = Function.reader.GetValue(0).ToString();
+                                    title[i] = Function.reader.GetValue(1).ToString();
+                                    author[i] = Function.reader.GetValue(2).ToString();
+                                    image[i] = Function.reader.GetValue(3).ToString();
+
+                                    //Initialize
+                                    bookAdminViewUserControl[i] = new BookAdminViewUserControl();
+
+                                    //Adding Data
+                                    bookAdminViewUserControl[i].bookid = bookid[i];
+                                    bookAdminViewUserControl[i].title = title[i];
+                                    bookAdminViewUserControl[i].author = author[i];
+                                    bookAdminViewUserControl[i].image = image[i];
+
+                                    flowLayoutPanelBooks.Controls.Add(bookAdminViewUserControl[i]);
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                flowLayoutPanelBooks.Controls.Clear();
+
+                try
+                {
+                    Connection.DB();
+                    Function.gen = "SELECT COUNT(*) FROM books WHERE title LIKE '%" + txtsearch.Text + "%'";
+                    Function.command = new SqlCommand(Function.gen, Connection.conn);
+                    Function.reader = Function.command.ExecuteReader();
+
+                    if (Function.reader.HasRows)
+                    {
+                        Function.reader.Read();
+
+                        string count = Function.reader.GetValue(0).ToString();
+
+                        booksCount = Convert.ToInt32(count);
+
+                        BookAdminViewUserControl[] bookAdminViewUserControl = new BookAdminViewUserControl[booksCount];
+
+                        try
+                        {
+                            Connection.DB();
+                            Function.gen = "SELECT * FROM books WHERE title LIKE '%" + txtsearch.Text + "%'";
+                            Function.command = new SqlCommand(Function.gen, Connection.conn);
+                            Function.reader = Function.command.ExecuteReader();
+
+                            if (Function.reader.HasRows)
+                            {
+
+                                for (int i = 0; i < bookAdminViewUserControl.Length; i++)
+                                {
+                                    Function.reader.Read();
+                                    bookid[i] = Function.reader.GetValue(0).ToString();
+                                    title[i] = Function.reader.GetValue(1).ToString();
+                                    author[i] = Function.reader.GetValue(2).ToString();
+                                    image[i] = Function.reader.GetValue(3).ToString();
+
+                                    //Initialize
+                                    bookAdminViewUserControl[i] = new BookAdminViewUserControl();
+
+                                    //Adding Data
+                                    bookAdminViewUserControl[i].bookid = bookid[i];
+                                    bookAdminViewUserControl[i].title = title[i];
+                                    bookAdminViewUserControl[i].author = author[i];
+                                    bookAdminViewUserControl[i].image = image[i];
+
+                                    flowLayoutPanelBooks.Controls.Add(bookAdminViewUserControl[i]);
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            //MessageBox.Show(ex.Message);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
     }
