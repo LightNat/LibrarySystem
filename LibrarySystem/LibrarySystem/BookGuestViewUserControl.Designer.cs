@@ -1,6 +1,6 @@
 ﻿namespace LibrarySystem
 {
-    partial class BookAdminViewUserControl
+    partial class BookGuestViewUserControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -31,8 +31,6 @@
             this.pbbooks = new System.Windows.Forms.PictureBox();
             this.lbltitle = new System.Windows.Forms.Label();
             this.lblauthor = new System.Windows.Forms.Label();
-            this.btnupdate = new System.Windows.Forms.Button();
-            this.btndelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbbooks)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,41 +63,17 @@
             this.lblauthor.TabIndex = 2;
             this.lblauthor.Text = "Author:";
             // 
-            // btnupdate
-            // 
-            this.btnupdate.ForeColor = System.Drawing.Color.Green;
-            this.btnupdate.Location = new System.Drawing.Point(260, 87);
-            this.btnupdate.Name = "btnupdate";
-            this.btnupdate.Size = new System.Drawing.Size(53, 23);
-            this.btnupdate.TabIndex = 3;
-            this.btnupdate.Text = "Update";
-            this.btnupdate.UseVisualStyleBackColor = true;
-            this.btnupdate.Click += new System.EventHandler(this.btnupdate_Click);
-            // 
-            // btndelete
-            // 
-            this.btndelete.ForeColor = System.Drawing.Color.Red;
-            this.btndelete.Location = new System.Drawing.Point(328, 87);
-            this.btndelete.Name = "btndelete";
-            this.btndelete.Size = new System.Drawing.Size(53, 23);
-            this.btndelete.TabIndex = 4;
-            this.btndelete.Text = "Delete";
-            this.btndelete.UseVisualStyleBackColor = true;
-            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
-            // 
-            // BookAdminViewUserControl
+            // BookGuestViewUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.Controls.Add(this.btndelete);
-            this.Controls.Add(this.btnupdate);
             this.Controls.Add(this.lblauthor);
             this.Controls.Add(this.lbltitle);
             this.Controls.Add(this.pbbooks);
-            this.Name = "BookAdminViewUserControl";
+            this.Name = "BookGuestViewUserControl";
             this.Size = new System.Drawing.Size(400, 122);
-            this.Load += new System.EventHandler(this.BookAdminViewUserControl_Load);
+            this.Load += new System.EventHandler(this.BookGuestViewUserControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbbooks)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -111,7 +85,5 @@
         private PictureBox pbbooks;
         private Label lbltitle;
         private Label lblauthor;
-        private Button btnupdate;
-        private Button btndelete;
     }
 }

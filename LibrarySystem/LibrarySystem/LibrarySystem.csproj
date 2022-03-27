@@ -16,6 +16,9 @@
     <Compile Update="Admin\AdminUpdateBooks.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="BookGuestViewUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
 
 </Project>

@@ -62,7 +62,9 @@ namespace LibrarySystem
 
         private void lblguest_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            
+            GuestViewBook guestViewBook = new GuestViewBook();
+            this.Visible = false;
+            guestViewBook.Show();
         }
     }
 }

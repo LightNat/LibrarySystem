@@ -25,3 +25,5 @@ C:\Users\Jonathan Gubot\source\repos\LibrarySystem\LibrarySystem\LibrarySystem\b
 C:\Users\Jonathan Gubot\source\repos\LibrarySystem\LibrarySystem\LibrarySystem\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Jonathan Gubot\source\repos\LibrarySystem\LibrarySystem\LibrarySystem\obj\Debug\net6.0-windows\LibrarySystem.csproj.CopyComplete
 C:\Users\Jonathan Gubot\source\repos\LibrarySystem\LibrarySystem\LibrarySystem\obj\Debug\net6.0-windows\LibrarySystem.BookAdminViewUserControl.resources
+C:\Users\Jonathan Gubot\source\repos\LibrarySystem\LibrarySystem\LibrarySystem\obj\Debug\net6.0-windows\LibrarySystem.GuestViewBook.resources
+C:\Users\Jonathan Gubot\source\repos\LibrarySystem\LibrarySystem\LibrarySystem\obj\Debug\net6.0-windows\LibrarySystem.BookGuestViewUserControl.resources
