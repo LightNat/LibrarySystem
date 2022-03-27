@@ -13,6 +13,9 @@ namespace LibrarySystem.Admin
 {
     public partial class AdminUpdateBooks : Form
     {
+        //Variable for update
+        private string bookIdUpdate;
+
         //holds the image info
         private string fileImage;
 
@@ -128,6 +131,52 @@ namespace LibrarySystem.Admin
 
         private void btnupdate_Click(object sender, EventArgs e)
         {
+            //MessageBox.Show(lblfilename.Text);
+            if (String.IsNullOrWhiteSpace(txttitle.Text) == true)
+            {
+                MessageBox.Show("Title must not be set as Null or WhiteSpace, Please try Again!", "Null | WhiteSpace", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (String.IsNullOrWhiteSpace(txtauthor.Text) == true)
+            {
+                MessageBox.Show("Author must not be set as Null or WhiteSpace, Please try Again!", "Null | WhiteSpace", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (lblfilename.Text == "No File Chosen")
+            {
+                MessageBox.Show("Please choose an Image File!", "Image", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                try
+                {
+                    bookIdUpdate = BookAdminViewUserControl.bookidUpdate;
+
+                    Connection.DB();
+                    Function.gen = "UPDATE books SET title = '"+txttitle.Text+"', author = '"+txtauthor.Text+"', image = '"+lblfilename.Text+"' WHERE bookid = '"+bookIdUpdate+"' ";
+                    Function.command = new SqlCommand(Function.gen, Connection.conn);
+                    Function.command.ExecuteNonQuery();
+                    try
+                    {
+                        File.Copy(fileImage, Path.Combine(Path.GetDirectoryName(Application.ExecutablePath) + "\\Books", lblfilename.Text));
+                    }
+                    catch (Exception ex)
+                    {
+                        //Do nothing
+                    }
+
+                    Admin.AdminViewBooks adminViewBooks = new Admin.AdminViewBooks();
+                    this.Visible = false;
+                    adminViewBooks.Show();
+
+                    MessageBox.Show("Book is updated successfully!", "Book", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    Connection.conn.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
 
         }
 
