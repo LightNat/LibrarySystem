@@ -38,6 +38,9 @@ namespace LibrarySystem.Admin
             var profile = Path.GetDirectoryName(Application.ExecutablePath) + "\\Admin\\Admin.png";
             pbprofile.Image = Image.FromFile(profile);
 
+            var search = Path.GetDirectoryName(Application.ExecutablePath) + "\\Admin\\Search.png";
+            pbsearch.Image = Image.FromFile(search);
+
             GenerateBooks();
         }
 

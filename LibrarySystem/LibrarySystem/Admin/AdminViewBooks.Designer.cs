@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pbsearch = new System.Windows.Forms.PictureBox();
             this.txtsearch = new System.Windows.Forms.TextBox();
             this.flowLayoutPanelBooks = new System.Windows.Forms.FlowLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,6 +41,7 @@
             this.btnbooks = new System.Windows.Forms.Button();
             this.btnupdateoradd = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbsearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pblogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbprofile)).BeginInit();
             this.SuspendLayout();
@@ -47,6 +49,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.pbsearch);
             this.panel1.Controls.Add(this.txtsearch);
             this.panel1.Controls.Add(this.flowLayoutPanelBooks);
             this.panel1.Controls.Add(this.label3);
@@ -54,6 +57,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(423, 281);
             this.panel1.TabIndex = 0;
+            // 
+            // pbsearch
+            // 
+            this.pbsearch.Location = new System.Drawing.Point(286, 59);
+            this.pbsearch.Name = "pbsearch";
+            this.pbsearch.Size = new System.Drawing.Size(20, 19);
+            this.pbsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbsearch.TabIndex = 3;
+            this.pbsearch.TabStop = false;
             // 
             // txtsearch
             // 
@@ -173,6 +185,7 @@
             this.Load += new System.EventHandler(this.AdminViewBooks_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbsearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pblogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbprofile)).EndInit();
             this.ResumeLayout(false);
@@ -193,5 +206,6 @@
         private Label label3;
         private FlowLayoutPanel flowLayoutPanelBooks;
         private TextBox txtsearch;
+        private PictureBox pbsearch;
     }
 }
