@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cxSoagozP2XQ98duiTyqMgORSaC3zjAybb9NegzIZZw7uGJUIYL9gV0IEGaIpmnrwnhE0hKs/DOgvxHZ1JIAYQ==",
+  "dgSpecHash": "5aN88/B+hmA8Bwj7R3NHHbRd9fOxbOvjwT/9L8nDYAoeRSRGqmBdt2hZCmAcw9sk+LTPG1lAbwT143ZDkMmVHA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Jonathan Gubot\\source\\repos\\LibrarySystem\\LibrarySystem\\LibrarySystem\\LibrarySystem.csproj",
+  "projectFilePath": "C:\\Users\\Jonathan Gubot\\Source\\Repos\\LibrarySystem\\LibrarySystem\\LibrarySystem\\LibrarySystem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jonathan Gubot\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Jonathan Gubot\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
