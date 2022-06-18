@@ -1,0 +1,11 @@
+C:\Users\Jonathan Gubot\source\repos\LibrarySystem\LibrarySystem\LibrarySystem\bin\Release\net6.0-windows\publish\LibrarySystem.exe
+C:\Users\Jonathan Gubot\source\repos\LibrarySystem\LibrarySystem\LibrarySystem\bin\Release\net6.0-windows\publish\LibrarySystem.dll
+C:\Users\Jonathan Gubot\source\repos\LibrarySystem\LibrarySystem\LibrarySystem\bin\Release\net6.0-windows\publish\LibrarySystem.deps.json
+C:\Users\Jonathan Gubot\source\repos\LibrarySystem\LibrarySystem\LibrarySystem\bin\Release\net6.0-windows\publish\LibrarySystem.runtimeconfig.json
+C:\Users\Jonathan Gubot\source\repos\LibrarySystem\LibrarySystem\LibrarySystem\bin\Release\net6.0-windows\publish\LibrarySystem.pdb
+C:\Users\Jonathan Gubot\source\repos\LibrarySystem\LibrarySystem\LibrarySystem\bin\Release\net6.0-windows\publish\System.Data.SqlClient.dll
+C:\Users\Jonathan Gubot\source\repos\LibrarySystem\LibrarySystem\LibrarySystem\bin\Release\net6.0-windows\publish\runtimes\win-arm64\native\sni.dll
+C:\Users\Jonathan Gubot\source\repos\LibrarySystem\LibrarySystem\LibrarySystem\bin\Release\net6.0-windows\publish\runtimes\win-x64\native\sni.dll
+C:\Users\Jonathan Gubot\source\repos\LibrarySystem\LibrarySystem\LibrarySystem\bin\Release\net6.0-windows\publish\runtimes\win-x86\native\sni.dll
+C:\Users\Jonathan Gubot\source\repos\LibrarySystem\LibrarySystem\LibrarySystem\bin\Release\net6.0-windows\publish\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Jonathan Gubot\source\repos\LibrarySystem\LibrarySystem\LibrarySystem\bin\Release\net6.0-windows\publish\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
