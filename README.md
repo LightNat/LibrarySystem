@@ -1,6 +1,6 @@
 # LibrarySystem
 
-  - A system that stores data about the books that are currently available where the admin and the guest can do the following that isn listed below.
+  - A system that stores data about the books that are currently available where the admin and the guest able to do the following that is listed below.
 
 **<h3>What you need:</h3>**
 - Microsoft Sql Server 2019 (Developer Edition is Recommended) or later, available  at https://www.microsoft.com/en-us/sql-server/sql-server-downloads. An Sql Server where you can store your desired information in relational databases, as well as to manage such data without complications. 
